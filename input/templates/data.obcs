@@ -1,0 +1,41 @@
+# Open-boundaries
+ &OBCS_PARM01
+# This flag turns off checking and fixing problematic topography across 
+# open boundaries.
+ OBCSfixTopo=.FALSE.,
+# OB_Ieast = PLACEHOLDER,
+# OB_Iwest = PLACEHOLDER,
+ OB_Jnorth = PLACEHOLDER,
+# OB_Jsouth = PLACEHOLDER,
+ useOBCSprescribe = .TRUE.,
+ useOBCSsponge = .TRUE.,
+# OBWuFile = 'Uzonal.bin',
+# OBEuFile = 'Uzonal.bin',
+ OBNuFile = 'Umerid.bin',
+# OBSuFile = 'Umerid.bin',
+# OBWvFile = 'Vzonal.bin',
+# OBEvFile = 'Vzonal.bin',
+ OBNvFile = 'Vmerid.bin',
+# OBSvFile = 'Vmerid.bin',
+# OBWtFile = 'Tzonal.bin',
+# OBEtFile = 'Tzonal.bin',
+ OBNtFile = 'Tmerid.bin',
+# OBStFile = 'Tmerid.bin',
+ OBCS_monitorFreq= 3600.,	  
+ OBCS_monSelect = 1,
+ &
+
+# Orlanski parameters
+ &OBCS_PARM02
+#Cmax=0.45,
+#cVelTimeScale=1000.,
+ &
+
+ &OBCS_PARM03
+# inverse relax. coef's (seconds)
+ Urelaxobcsinner=7200.,
+ Urelaxobcsbound=3600.,
+ Vrelaxobcsinner=7200.,
+ Vrelaxobcsbound=3600.,
+ spongeThickness=15,
+ &

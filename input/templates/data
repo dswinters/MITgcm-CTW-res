@@ -1,0 +1,75 @@
+# ====================
+# | Model parameters |
+# ====================
+#
+# Continuous equation parameters
+ &PARM01
+ tRef = 55*0.,
+ sRef = 55*35.,
+ no_slip_sides  = .FALSE.,
+ no_slip_bottom = .FALSE.,
+ viscAh  = 1.E2,
+ viscAz  = 1.E-1,
+ diffKhT = 1.E2,
+ diffKzT = 1.E-6,
+ f0   = 1.E-04,
+ beta = 0.E-11,
+ tAlpha = 2.E-4,
+ sBeta  = 0.E-4,
+ gravity = 9.81,
+ gBaro   = 9.81,
+ rigidLid = .FALSE.,
+ implicitFreeSurface=.TRUE.,
+ exactConserv = .TRUE.
+ implicitDiffusion = .TRUE.,
+ implicitViscosity = .TRUE.,
+ nonHydrostatic = .FALSE.,
+ useSingleCpuIO = .TRUE.,
+ readBinaryPrec  = 32,
+ writeBinaryPrec = 32,
+ writeStatePrec  = 32,
+ staggerTimeStep=.TRUE.
+ saltStepping  = .FALSE.,
+ tempAdvScheme = 77,
+ hFacMin=0.1,
+ debuglevel=1,
+ &
+
+# Elliptic solver parameters 
+ &PARM02
+ cg2dMaxIters       =  10000,
+ cg2dTargetResidual = 1.E-14,
+ cg3dMaxIters       =    400,
+ cg3dTargetResidual = 1.E-14,
+ &
+
+# Time stepping parameters
+ &PARM03
+
+ niter0 = 0,
+# pickupSuff = 'pickup.ckptA',
+ nTimeSteps  =  PLACEHOLDER,
+ deltaT      =  PLACEHOLDER,
+ dumpFreq    =  31536000.,
+ monitorFreq =  PLACEHOLDER,
+ abEps       =    0.1,
+ pChkptFreq  = 345600.,
+ chkptFreq   =    0.0,
+ &
+
+# Gridding parameters
+ &PARM04
+ usingCartesianGrid=.TRUE.,
+ usingSphericalPolarGrid=.FALSE.,
+ delXFile = 'delX.bin',
+ delYFile = 'delY.bin',
+ delRFile = 'delZ.bin',
+ &
+
+# Input datasets
+ &PARM05
+ uVelInitFile    = 'Uinit.bin',
+ vVelInitFile    = 'Vinit.bin',
+ hydrogThetaFile = 'Tinit.bin',
+ bathyFile       = 'topog.bin',
+ &
