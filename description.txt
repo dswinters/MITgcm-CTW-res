@@ -1,4 +1,1 @@
-12 periods
-1e2 visc
-Repeat of the super-inertial edge wave sweep
-2.5km grid spacing
+Enter description here

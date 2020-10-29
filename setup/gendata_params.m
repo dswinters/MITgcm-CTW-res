@@ -8,10 +8,8 @@ params.dx = 2.5e3;
 params.dy = 2.5e3;
 
 % wavenumber and forcing frequency
-klim = [4.5 7.5]*1e-05; % super-inertial edge waves
-dk = 0.75e-7;
-k = [klim(1):dk:klim(2)];           % wavenumbers (rad/m)
-om = 2.95*f
+params.k = [];
+params.om = [];
 
 % pressure forcing parameters
 params.p0 = 5; % Pressure forcing amplitude, N/m^2
